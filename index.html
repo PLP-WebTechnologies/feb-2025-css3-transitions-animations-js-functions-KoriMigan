@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher with CSS Animations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Theme Switcher</h1>
+        <p>Select your preferred theme. Your choice will be saved for your next visit!</p>
+        
+        <div class="theme-icon" id="themeIcon"></div>
+        
+        <div class="theme-options">
+            <button class="theme-button blue-theme" data-theme="blue">Blue Theme</button>
+            <button class="theme-button green-theme" data-theme="green">Green Theme</button>
+            <button class="theme-button purple-theme" data-theme="purple">Purple Theme</button>
+            <button class="theme-button dark-theme" data-theme="dark">Dark Theme</button>
+        </div>
+        
+        <div class="content-box">
+            <h2>Your Preferences</h2>
+            <p>This box demonstrates CSS transitions. When you hover over it, it will smoothly move up and create a shadow effect.</p>
+            <p>Your current theme preference is: <strong id="currentTheme">Default (Blue)</strong></p>
+            <p>Theme last changed: <strong id="lastChanged">Never</strong></p>
+        </div>
+    </div>
+    
+    <div class="status-message" id="statusMessage">Theme saved!</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
