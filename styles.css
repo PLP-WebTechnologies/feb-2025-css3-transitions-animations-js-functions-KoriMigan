@@ -6,6 +6,8 @@ body {
     padding: 0;
     transition: background-color 0.4s, color 0.4s;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -15,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
 }
 
 h1 {
@@ -133,6 +136,45 @@ h1 {
     animation: ripple 1s linear;
 }
 
+/* Footer styles */
+.footer {
+    background-color: #34495e;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    transition: background-color 0.4s;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-credits {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.heart {
+    color: #e74c3c;
+    display: inline-block;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 /* Dark theme */
 body.dark-mode {
     background-color: #1a1a1a;
@@ -156,6 +198,11 @@ body.dark-mode .status-message {
     background-color: #e74c3c;
 }
 
+body.dark-mode .footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid #3a3a3a;
+}
+
 /* Green theme */
 body.green-mode {
     background-color: #e8f8f5;
@@ -172,6 +219,11 @@ body.green-mode .theme-icon {
 
 body.green-mode .status-message {
     background-color: #f1c40f;
+}
+
+body.green-mode .footer {
+    background-color: #2ecc71;
+    color: #fff;
 }
 
 /* Purple theme */
@@ -192,6 +244,11 @@ body.purple-mode .status-message {
     background-color: #3498db;
 }
 
+body.purple-mode .footer {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
 /* Status message animation */
 .status-message {
     padding: 0.5rem 1rem;
@@ -204,6 +261,7 @@ body.purple-mode .status-message {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s, transform 0.3s;
+    z-index: 100;
 }
 
 .status-message.show {
